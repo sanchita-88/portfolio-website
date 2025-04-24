@@ -279,17 +279,18 @@ export const workExperiences = [
     duration: "August 2022 - current",
     icon: "varlab_logo.png",
     duties: [
-      "Developed scalable and performant web applications using JavaScript, ReactJS, MongoDB, and ExpressJS.",
-      "Contributed to flat screen and VR learning experiences using Unity and C#, optimizing data structures for efficiency.",
+      "Engineered performant and scalable web apps using ReactJS, JavaScript, TypeScript, and Node.js, implementing reusable components and modular architecture.",
+      "Developed flat screen and VR learning experiences using Unity and C#, applying object-oriented principles and optimizing performance.",
       "Led the development of onboarding projects, standardizing workflows and improving ramp-up time for new developers by 45%.",
-      "Conducted code reviews, enforcing best practices in code efficiency, security, and testability.",
-      "Mentored 10+ co-op developers enhancing productivity and team collaboration.",
+      "Conducted code reviews, enforcing SOLID principles, clean code standards, and test-driven development (TDD).",
+      "Applied responsive design principles to ensure accessibility and usability across devices.",
+      "Mentored 20+ co-op developers, fostering agile best practices and effective use of Git and version control workflows.",
     ],
   },
   {
     id: 2,
     company: "Centre for Virtual Reality Innovation - VARLab",
-    position: "AR/VR Software Developer (Co-op and Part-Time)",
+    position: "AR/VR Software Developer (Co-op & Part-Time)",
     duration: "January 2021 - December 2021",
     icon: "varlab_logo.png",
     duties: [
