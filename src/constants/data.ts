@@ -32,8 +32,8 @@ export const myProjects = [
     desc: "A 3D obstacle course game built with React Three Fiber, featuring a third-person character controller with movement and animations.",
     subdesc:
       "Currently in early development, with plans for level completion, multiplayer, and collectibles.",
-    href: "https://a-coderr.github.io/obstacle_course_r3f/",
-    source: "https://github.com/A-coderr/obstacle_course_r3f",
+    href: "https://github.com/A-coderr/3d_obstacle_course",
+    source: "https://a-coderr.github.io/3d_obstacle_course/",
     logo: "projects/ThreeRun_Main_Screen.png",
     logoStyle: {
       backgroundColor: "#2A1816",
@@ -76,6 +76,21 @@ export const myProjects = [
         name: "Redux",
         path: "icons/redux.svg",
       },
+      {
+        id: 8,
+        name: "Prettier",
+        path: "icons/prettier.svg",
+      },
+      {
+        id: 9,
+        name: "ESLint",
+        path: "icons/eslint.svg",
+      },
+      {
+        id: 10,
+        name: "Vite",
+        path: "icons/vite.svg",
+      },
     ],
   },
   {
@@ -83,8 +98,8 @@ export const myProjects = [
     desc: "My Portfolio Website, a showcase of my skills, projects, and experience as a software developer.",
     subdesc:
       "Built with modern web technologies, this portfolio highlights interactive 3D elements, smooth animations, and a responsive design for an engaging user experience.",
-    href: "https://github.com/A-coderr/three_portfolio",
-    source: "https://github.com/A-coderr/three_portfolio",
+    href: "https://github.com/A-coderr/portfolio-website",
+    source: "https://a-coderr.github.io/portfolio-website/",
     logo: "projects/Portfolio_Main.png",
     logoStyle: {
       backgroundColor: "#13202F",
@@ -127,61 +142,28 @@ export const myProjects = [
         name: "CSS",
         path: "icons/css-3.svg",
       },
-    ],
-  },
-  {
-    title: "SKIF Karate Canada Website",
-    desc: "A Karate Website, developed as part of a college assignment.",
-    subdesc:
-      "Designed with a clean and responsive layout, it ensures a smooth user experience across different devices.",
-    href: "https://skif-website.vercel.app/",
-    source: "https://github.com/A-coderr/skif-website",
-    logo: "projects/KarateGalaxy_Main.png",
-    logoStyle: {
-      backgroundColor: "#60f5a1",
-      background:
-        "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
-      border: "0.2px solid rgba(208, 213, 221, 1)",
-      boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
-    },
-    tags: [
       {
-        id: 1,
-        name: "React.js",
-        path: "icons/react.svg",
+        id: 8,
+        name: "Prettier",
+        path: "icons/prettier.svg",
       },
       {
-        id: 2,
-        name: "TailwindCSS",
-        path: "icons/tailwindcss-icon.svg",
+        id: 9,
+        name: "ESLint",
+        path: "icons/eslint.svg",
       },
       {
-        id: 3,
-        name: "TypeScript",
-        path: "icons/typescript-icon.svg",
-      },
-      {
-        id: 4,
-        name: "Java Script",
-        path: "icons/javascript.svg",
-      },
-      {
-        id: 5,
-        name: "HTML",
-        path: "icons/html-5.svg",
-      },
-      {
-        id: 6,
-        name: "CSS",
-        path: "icons/css-3.svg",
+        id: 10,
+        name: "Vite",
+        path: "icons/vite.svg",
       },
     ],
   },
   {
     title: "Karate Galaxy - Karate Website",
-    desc: "A Karate Website, developed as part of a college assignment.",
+    desc: "My first ever web project, built as part of a college assignment and the starting point of my journey as a software developer.",
     subdesc:
-      "Designed with a clean and responsive layout, it ensures a smooth user experience across different devices.",
+      "Built using only HTML and CSS, it is a foundational project that reflects my early passion for web development.",
     href: "https://a-coderr.github.io/karate-galaxy/",
     source: "https://github.com/A-coderr/Karate_HTML_CSS",
     logo: "projects/KarateGalaxy_Main.png",
@@ -202,6 +184,84 @@ export const myProjects = [
         id: 2,
         name: "CSS",
         path: "icons/css-3.svg",
+      },
+    ],
+  },
+  {
+    title: "SKIF Karate Canada Website",
+    desc: "A modern, responsive website built with Next.js to represent the SKIF Karate Canada.",
+    subdesc:
+      "This project showcases a blend of modern web development and traditional martial arts values.",
+    href: "https://skif-website.vercel.app/",
+    source: "https://github.com/A-coderr/skif-website",
+    logo: "projects/skif.png",
+    logoStyle: {
+      backgroundColor: "#60f5a1",
+      background:
+        "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+      border: "0.2px solid rgba(208, 213, 221, 1)",
+      boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
+    },
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "icons/react.svg",
+      },
+      {
+        id: 2,
+        name: "Nextjs",
+        path: "icons/nextjs.svg",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "icons/tailwindcss-icon.svg",
+      },
+      {
+        id: 4,
+        name: "TypeScript",
+        path: "icons/typescript-icon.svg",
+      },
+      {
+        id: 5,
+        name: "Java Script",
+        path: "icons/javascript.svg",
+      },
+      {
+        id: 6,
+        name: "HTML",
+        path: "icons/html-5.svg",
+      },
+      {
+        id: 7,
+        name: "CSS",
+        path: "icons/css-3.svg",
+      },
+      {
+        id: 8,
+        name: "Prettier",
+        path: "icons/prettier.svg",
+      },
+      {
+        id: 9,
+        name: "ESLint",
+        path: "icons/eslint.svg",
+      },
+      {
+        id: 10,
+        name: "Markdown",
+        path: "icons/markdown.svg",
+      },
+      {
+        id: 11,
+        name: "Vite",
+        path: "icons/vite.svg",
+      },
+      {
+        id: 12,
+        name: "Vercel",
+        path: "icons/vercel.svg",
       },
     ],
   },
