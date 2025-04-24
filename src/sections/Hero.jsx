@@ -15,8 +15,8 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setWaveTrigger(true);
-      setTimeout(() => setWaveTrigger(false), 1000); // Reset after animation
-    }, 4000); // Wave every 4 seconds
+      setTimeout(() => setWaveTrigger(false), 1000);
+    }, 4000); //Wave every 4 seconds.
 
     return () => clearInterval(interval);
   }, []);
@@ -65,7 +65,7 @@ after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-whit
               animate={
                 waveTrigger
                   ? {
-                      y: [0, -10, 0], // Wave motion
+                      y: [0, -10, 0], //Wave motion.
                       transition: {
                         delay: index * 0.1,
                         duration: 0.6,

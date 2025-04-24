@@ -16,7 +16,9 @@ const ProjectCard = ({ project }) => {
         />
         {/* Social Icon in the top-right corner of the image */}
         <div className="absolute top-0 right-0 m-3 z-20">
-          <SocialIcon className="heroIcon" url={project.source} />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12">
+            <SocialIcon className="!w-full !h-full" url={project.source} />
+          </div>
         </div>
       </div>
 
