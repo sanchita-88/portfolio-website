@@ -5,18 +5,23 @@ import PropTypes from "prop-types";
 const ProjectCard = ({ project }) => {
   return (
     <motion.div className="w-[280px] sm:w-[350px] md:w-[450px] lg:w-[500px] flex flex-col gap-5 relative rounded-lg sm:p-7 py-5 px-5 shadow-2xl shadow-black-200 bg-[#32303a] transition-all duration-200 select-none">
-      {/* Project Image & Social Icon */}
-      <div className="backdrop-filter backdrop-blur-3xl w-full rounded-lg relative">
-        <img src={project.logo} alt="logo" className="rounded-lg" />
-        <div className="absolute inset-0 flex justify-end m-3">
-          <div>
-            <SocialIcon className="heroIcon" url={project.source} />
-          </div>
+      <div
+        className="absolute -top-12 md:-top-24 left-1/2 transform -translate-x-1/2 w-[230px] sm:w-[290px] md:w-[370px] lg:w-[420px] rounded-xl overflow-hidden shadow-xl z-20"
+        style={project.logoStyle}
+      >
+        <img
+          src={project.logo}
+          alt="logo"
+          className="w-full h-full object-cover rounded-xl"
+        />
+        {/* Social Icon in the top-right corner of the image */}
+        <div className="absolute top-0 right-0 m-3 z-20">
+          <SocialIcon className="heroIcon" url={project.source} />
         </div>
       </div>
 
       {/* Project Details */}
-      <div className="flex flex-col gap-5 text-white-600 my-2">
+      <div className="flex flex-col gap-5 text-white-600 my-2 pt-20 sm:pt-24 md:pt-28 lg:pt-32">
         <h2 className="text-md md:text-xl font-semibold mb-2 text-white font-generalsans">
           {project.title}
         </h2>
@@ -61,6 +66,7 @@ export default ProjectCard;
 ProjectCard.propTypes = {
   project: PropTypes.shape({
     logo: PropTypes.string.isRequired,
+    logoStyle: PropTypes.object.isRequired,
     source: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,

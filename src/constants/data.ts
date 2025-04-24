@@ -36,9 +36,11 @@ export const myProjects = [
     source: "https://a-coderr.github.io/3d_obstacle_course/",
     logo: "projects/ThreeRun_Main_Screen.png",
     logoStyle: {
-      backgroundColor: "#2A1816",
-      border: "0.2px solid #36201D",
-      boxShadow: "0px 0px 60px 0px #AA3C304D",
+      backgroundColor: "#b18eff",
+      background:
+        "linear-gradient(0deg, #B18EFF50, #B18EFF50), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+      border: "0.2px solid rgba(177, 142, 255, 1)",
+      boxShadow: "0px 0px 60px 0px rgba(177, 142, 255, 0.3)",
     },
     tags: [
       {
@@ -102,9 +104,11 @@ export const myProjects = [
     source: "https://a-coderr.github.io/portfolio-website/",
     logo: "projects/Portfolio_Main.png",
     logoStyle: {
-      backgroundColor: "#13202F",
-      border: "0.2px solid #17293E",
-      boxShadow: "0px 0px 60px 0px #2F6DB54D",
+      backgroundColor: "#4FC3F7",
+      background:
+        "linear-gradient(0deg, #4FC3F750, #4FC3F750), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+      border: "0.2px solid rgba(79, 195, 247, 1)",
+      boxShadow: "0px 0px 60px 0px rgba(79, 195, 247, 0.3)",
     },
     tags: [
       {
@@ -168,11 +172,11 @@ export const myProjects = [
     source: "https://github.com/A-coderr/Karate_HTML_CSS",
     logo: "projects/KarateGalaxy_Main.png",
     logoStyle: {
-      backgroundColor: "#60f5a1",
+      backgroundColor: "#A0F0BC",
       background:
-        "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
-      border: "0.2px solid rgba(208, 213, 221, 1)",
-      boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
+        "linear-gradient(0deg, #A0F0BC50, #A0F0BC50), linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(208, 213, 221, 0.85) 100%)",
+      border: "0.2px solid rgba(160, 240, 188, 1)",
+      boxShadow: "0px 0px 60px 0px rgba(135, 234, 174, 0.4)",
     },
     tags: [
       {
@@ -196,11 +200,11 @@ export const myProjects = [
     source: "https://github.com/A-coderr/skif-website",
     logo: "projects/skif.png",
     logoStyle: {
-      backgroundColor: "#60f5a1",
+      backgroundColor: "#FF4C4C",
       background:
-        "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
-      border: "0.2px solid rgba(208, 213, 221, 1)",
-      boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
+        "linear-gradient(0deg, #FF4C4C50, #FF4C4C50), linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 200, 200, 0.85) 100%)",
+      border: "0.2px solid rgba(255, 76, 76, 1)",
+      boxShadow: "0px 0px 60px 0px rgba(183, 28, 28, 0.4)",
     },
     tags: [
       {
