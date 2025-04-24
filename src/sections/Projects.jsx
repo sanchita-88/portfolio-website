@@ -51,7 +51,7 @@ const Projects = () => {
               setSlideIndex((prev) => (prev + 1) % myProjects.length);
             }
           }}
-          className="w-full my-10 md:my-20 h-[400px] md:h-[500px] flex items-center justify-center cursor-grab active:cursor-grabbing"
+          className="w-full mt-24 mb-12 md:mt-32 md:mb-20 lg:mt-40 h-[400px] md:h-[500px] flex items-center justify-center cursor-grab active:cursor-grabbing"
         >
           {slides.length > 0 && (
             <Carousel

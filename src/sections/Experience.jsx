@@ -27,8 +27,10 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className="text-white font-bold">{experience.position}</h3>
-        <p className=" text-gray-300 font-mono" style={{ margin: 0 }}>
+        <h3 className="text-white text-base font-bold">
+          {experience.position}
+        </h3>
+        <p className=" text-gray-300 text-base font-mono" style={{ margin: 0 }}>
           {experience.company}
         </p>
       </div>
@@ -36,7 +38,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.duties.map((duty, index) => (
           <li
             key={`duty-point-${index}`}
-            className="text-white pl-1 tracking-wider"
+            className="text-white pl-1 text-xs md:text-sm lg:text-md md:tracking-wider"
           >
             {duty}
           </li>
