@@ -6,13 +6,13 @@ export const navLinks = [
   },
   {
     id: 2,
-    name: "Experience",
-    href: "#experience",
+    name: "Skills",
+    href: "#skills",
   },
   {
     id: 3,
-    name: "Skills",
-    href: "#skills",
+    name: "Experience",
+    href: "#experience",
   },
   {
     id: 4,
