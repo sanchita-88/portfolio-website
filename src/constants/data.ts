@@ -130,6 +130,54 @@ export const myProjects = [
     ],
   },
   {
+    title: "SKIF Karate Canada Website",
+    desc: "A Karate Website, developed as part of a college assignment.",
+    subdesc:
+      "Designed with a clean and responsive layout, it ensures a smooth user experience across different devices.",
+    href: "https://skif-website.vercel.app/",
+    source: "https://github.com/A-coderr/skif-website",
+    logo: "projects/KarateGalaxy_Main.png",
+    logoStyle: {
+      backgroundColor: "#60f5a1",
+      background:
+        "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+      border: "0.2px solid rgba(208, 213, 221, 1)",
+      boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
+    },
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "icons/react.svg",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "icons/tailwindcss-icon.svg",
+      },
+      {
+        id: 3,
+        name: "TypeScript",
+        path: "icons/typescript-icon.svg",
+      },
+      {
+        id: 4,
+        name: "Java Script",
+        path: "icons/javascript.svg",
+      },
+      {
+        id: 5,
+        name: "HTML",
+        path: "icons/html-5.svg",
+      },
+      {
+        id: 6,
+        name: "CSS",
+        path: "icons/css-3.svg",
+      },
+    ],
+  },
+  {
     title: "Karate Galaxy - Karate Website",
     desc: "A Karate Website, developed as part of a college assignment.",
     subdesc:
