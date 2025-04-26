@@ -9,6 +9,15 @@ import Loader from "./Loader";
 
 const AnimatedText = animated(Text);
 
+/**
+ * A single word in the sphere.
+ *
+ * @param {Object} props Component props.
+ * @param {*} props.children The text of the word.
+ * @param {THREE.Vector3} props.position The position of the word in 3D space.
+ *
+ * @returns {JSX.Element} A word in a sphere.
+ */
 const Word = ({ children, position }) => {
   const [hovered, setHovered] = useState(false);
   const textRef = useRef();
@@ -46,16 +55,26 @@ Word.propTypes = {
   position: PropTypes.object.isRequired,
 };
 
+/**
+ * A sphere with words.
+ *
+ * @returns {JSX.Element} A sphere with words.
+ */
 const WordSphere = () => {
   const radius = 5;
+  const goldenAngle = Math.PI * (3 - Math.sqrt(5)); //≈ 2.399
+
   const wordPositions = skills.map((skill, i) => {
-    const phi = Math.acos(-1 + (2 * i) / skills.length);
-    const theta = Math.sqrt(skills.length * Math.PI) * phi;
+    const y = 1 - (i / (skills.length - 1)) * 2;
+    const radiusAtY = Math.sqrt(1 - y * y);
+    const theta = goldenAngle * i;
+
     const position = new THREE.Vector3(
-      radius * Math.sin(phi) * Math.cos(theta),
-      radius * Math.sin(phi) * Math.sin(theta),
-      radius * Math.cos(phi)
+      radius * Math.cos(theta) * radiusAtY,
+      radius * y,
+      radius * Math.sin(theta) * radiusAtY
     );
+
     return { position, skill };
   });
 
@@ -70,6 +89,14 @@ const WordSphere = () => {
   );
 };
 
+/**
+ * A canvas that displays a sphere with words in 3D space.
+ *
+ * It renders a canvas with a sphere made of words, with an ambient light and orbit controls.
+ * The canvas is responsive and will change its size and camera settings based on the window size.
+ *
+ * @returns {JSX.Element} A Canvas element with a sphere of words.
+ */
 const SkillsSphere = () => {
   const [size, setSize] = useState(window.innerWidth);
 
@@ -79,19 +106,24 @@ const SkillsSphere = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const isMobile = size < 768; // Adjust sphere size for mobile screens
+  const isMobile = size < 768;
   return (
     <Canvas
       camera={{
-        position: [0, 0, isMobile ? 14 : 12], // Move camera back on smaller screens
-        fov: isMobile ? 70 : 60, // Increase FOV for a wider view on mobile
+        position: [0, 0, isMobile ? 14 : 12],
+        fov: isMobile ? 70 : 60,
       }}
-      style={{ width: "100%", height: isMobile ? "50vh" : "80vh" }} // Reduce height on mobile
+      style={{ width: "100%", height: isMobile ? "50vh" : "80vh" }}
     >
       <Suspense fallback={<Loader />}>
         <ambientLight intensity={0.5} />
         <WordSphere />
-        <OrbitControls enablePan={false} enableZoom={false} />
+        <OrbitControls
+          enablePan={false}
+          enableZoom={false}
+          autoRotate
+          autoRotateSpeed={0.5}
+        />
       </Suspense>
     </Canvas>
   );
