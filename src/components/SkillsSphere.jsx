@@ -106,14 +106,19 @@ const SkillsSphere = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const isMobile = size < 768;
+  const isMobile = size < 640;
+  const isTablet = size >= 640 && size < 1024;
+
   return (
     <Canvas
       camera={{
-        position: [0, 0, isMobile ? 14 : 12],
-        fov: isMobile ? 70 : 60,
+        position: isMobile ? [0, 0, 14] : isTablet ? [0, 0, 16] : [0, 0, 12],
+        fov: isMobile ? 70 : isTablet ? 65 : 60,
       }}
-      style={{ width: "100%", height: isMobile ? "50vh" : "80vh" }}
+      style={{
+        width: "100%",
+        height: isMobile ? "50vh" : isTablet ? "60vh" : "80vh",
+      }}
     >
       <Suspense fallback={<Loader />}>
         <ambientLight intensity={0.5} />
