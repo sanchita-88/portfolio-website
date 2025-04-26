@@ -359,7 +359,7 @@ export const skills = [
   "Vitest",
   "Bitbucket",
   "Algorithms",
-  "User Experience",
+  "UI/UX",
   "Vite",
   "Prettier",
   "ESLint",
