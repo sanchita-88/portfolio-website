@@ -16,11 +16,12 @@ const Skills = () => {
               viewport={{ once: true }}
             >
               <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
-                Skills
+                Skills & Technologies
               </LinearGradient>
             </motion.h2>
           </div>
-          <div className="flex w-full justify-center">
+          <div className="relative w-full flex items-center justify-center">
+            <div className="absolute w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full bg-[#fc0865]/20 blur-3xl" />
             <SkillsSphere />
           </div>
         </div>

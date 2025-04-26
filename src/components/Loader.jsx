@@ -1,8 +1,12 @@
 import { Html, useProgress } from "@react-three/drei";
 
+/**
+ * Displays a loading bar for the 3D scene
+ * @returns A JSX element that renders a loading bar
+ */
 const Loader = () => {
-  const { progress } = useProgress(); // Get loading progress
-  console.log("Loading Progress:", progress); // Log progress to see if it's working
+  const { progress } = useProgress();
+  console.log("Loading Progress:", progress);
 
   return (
     <Html center>
