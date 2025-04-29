@@ -29,8 +29,8 @@ const ProjectCard = ({ project }) => {
         </p>
       </div>
 
-      {/* Tags & Links */}
       <div className="flex flex-col items-start justify-between flex-wrap gap-5">
+        {/* Technologies */}
         <div className="flex flex-wrap items-center gap-3 w-full overflow-hidden">
           {project.tags.map((tag, index) => (
             <div
@@ -42,8 +42,8 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
 
-        {/* Links side-by-side */}
-        <div className="flex justify-between items-center w-full mt-4">
+        <div className="flex justify-between items-center w-full">
+          {/* GitHub Link */}
           {project.href && (
             <motion.a
               className="flex items-center gap-2 cursor-pointer text-white"
@@ -57,6 +57,8 @@ const ProjectCard = ({ project }) => {
               <FaGithub className="w-4 h-4" />
             </motion.a>
           )}
+
+          {/* Demo Link */}
           <div className="flex items-center gap-6">
             <motion.a
               className="flex items-center gap-2 cursor-pointer text-white"
