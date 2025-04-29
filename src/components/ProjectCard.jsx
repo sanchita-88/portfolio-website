@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { SocialIcon } from "react-social-icons";
 import PropTypes from "prop-types";
+import { FaGithub } from "react-icons/fa";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -14,12 +14,6 @@ const ProjectCard = ({ project }) => {
           alt="logo"
           className="w-full h-full object-cover rounded-xl"
         />
-        {/* Social Icon in the top-right corner of the image */}
-        <div className="absolute top-0 right-0 m-3 z-20">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12">
-            <SocialIcon className="!w-full !h-full" url={project.source} />
-          </div>
-        </div>
       </div>
 
       {/* Project Details */}
@@ -35,8 +29,8 @@ const ProjectCard = ({ project }) => {
         </p>
       </div>
 
-      {/* Tags & Demo Link */}
       <div className="flex flex-col items-start justify-between flex-wrap gap-5">
+        {/* Technologies */}
         <div className="flex flex-wrap items-center gap-3 w-full overflow-hidden">
           {project.tags.map((tag, index) => (
             <div
@@ -47,17 +41,38 @@ const ProjectCard = ({ project }) => {
             </div>
           ))}
         </div>
-        <motion.a
-          className="flex items-center gap-2 cursor-pointer text-white-600"
-          href={project.href}
-          target="_blank"
-          rel="noreferrer"
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.2, ease: "easeOut" }}
-        >
-          <p className="text-white text-xs md:text-base">Demo</p>
-          <img src="arrow-up.png" alt="arrow" className="w-3 h-3" />
-        </motion.a>
+
+        <div className="flex justify-between items-center w-full">
+          {/* GitHub Link */}
+          {project.href && (
+            <motion.a
+              className="flex items-center gap-2 cursor-pointer text-white"
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+            >
+              <p className="text-xs md:text-base">GitHub</p>
+              <FaGithub className="w-4 h-4" />
+            </motion.a>
+          )}
+
+          {/* Demo Link */}
+          <div className="flex items-center gap-6">
+            <motion.a
+              className="flex items-center gap-2 cursor-pointer text-white"
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+            >
+              <p className="text-xs md:text-base">Demo</p>
+              <img src="arrow-up.png" alt="arrow" className="w-3 h-3" />
+            </motion.a>
+          </div>
+        </div>
       </div>
     </motion.div>
   );
