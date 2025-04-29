@@ -26,27 +26,48 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
+      {/* Experience */}
       <div>
         <h3 className="text-white text-base font-bold">
           {experience.position}
         </h3>
-        <p className=" text-gray-300 text-base font-mono" style={{ margin: 0 }}>
+        <p className="text-gray-300 text-base font-mono" style={{ margin: 0 }}>
           {experience.company}
         </p>
       </div>
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.duties.map((duty, index) => (
-          <li
-            key={`duty-point-${index}`}
-            className="text-white pl-1 text-xs md:text-sm lg:text-md md:tracking-wider"
+
+      {/* Technologies */}
+      <div className="mt-4 flex flex-wrap gap-2">
+        {experience.technologies.map((tech, index) => (
+          <span
+            key={index}
+            className="bg-[#7e3ff2] text-white text-xs md:text-sm px-2 py-1 rounded-full"
           >
-            {duty}
-          </li>
+            {tech}
+          </span>
         ))}
-      </ul>
+      </div>
+
+      {/* Projects */}
+      {experience.projects && experience.projects.length > 0 && (
+        <div className="mt-5">
+          <h4 className="text-sm text-white font-semibold mb-2">Projects:</h4>
+          <ul className="list-disc ml-5 space-y-1">
+            {experience.projects.map((project, i) => (
+              <li
+                key={`project-${i}`}
+                className="text-gray-400 text-xs md:text-sm font-medium"
+              >
+                {project.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </VerticalTimelineElement>
   );
 };
+
 const Experience = () => {
   return (
     <>
@@ -55,6 +76,7 @@ const Experience = () => {
         id="experience"
       >
         <div className="flex flex-col w-full max-w-7xl items-center justify-start">
+          {/* Title */}
           <div className="w-full">
             <motion.h2
               className="mb-10 xl:text-5xl md:text-4xl sm:text-3xl text-2xl font-black !leading-normal"
@@ -69,6 +91,7 @@ const Experience = () => {
             </motion.h2>
           </div>
 
+          {/* Timeline */}
           <VerticalTimeline lineColor={"#fff"}>
             {workExperiences.map((experience, index) => (
               <ExperienceCard
@@ -92,5 +115,13 @@ ExperienceCard.propTypes = {
     duration: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
     duties: PropTypes.arrayOf(PropTypes.string).isRequired,
+    technologies: PropTypes.arrayOf(PropTypes.string),
+    projects: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        description: PropTypes.string,
+        link: PropTypes.string,
+      })
+    ),
   }).isRequired,
 };
