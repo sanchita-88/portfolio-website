@@ -196,8 +196,7 @@ export const myProjects = [
     desc: "A modern, responsive website built with Next.js to represent the SKIF Karate Canada.",
     subdesc:
       "This project showcases a blend of modern web development and traditional martial arts values.",
-    href: "https://skif-website.vercel.app/",
-    source: "https://github.com/A-coderr/skif-website",
+    href: "https://skifkarate.ca/",
     logo: "projects/skif.png",
     logoStyle: {
       backgroundColor: "#FF4C4C",
