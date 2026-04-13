@@ -86,7 +86,7 @@ const Experience = () => {
               viewport={{ once: true }}
             >
               <LinearGradient gradient={["to left", "#ff9720 ,#fc0865"]}>
-                Work Experience
+                Education & Achievements
               </LinearGradient>
             </motion.h2>
           </div>
