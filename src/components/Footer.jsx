@@ -20,14 +20,14 @@ const Footer = () => {
         ></motion.div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between">
-          {/* Left Section - Branding & Resume Button */}
+          {/* Left Section - Resume Button */}
           <motion.div
             className="flex flex-col sm:flex-row items-center gap-6"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <a
-              href="resume_anzhelika_kostyuk.pdf"
+              href="/sarthak_khare_resume.pdf"
               download
               target="_blank"
               rel="noopener noreferrer"
@@ -40,10 +40,8 @@ const Footer = () => {
           {/* Right Section - Social Icons */}
           <div className="flex gap-4 mt-4 sm:mt-0">
             {[
-              "https://github.com/A-coderr",
-              "http://www.linkedin.com/in/anzhelika-kostyuk-a2b388194",
-              "https://www.instagram.com/a_akcio/?hl=en",
-              "https://www.facebook.com/profile.php?id=100011369881132",
+              "https://github.com/SarthaK122112",
+              "https://linkedin.com/in/sarthak-khare-093599296",
             ].map((url, index) => (
               <motion.div
                 key={index}
@@ -63,7 +61,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-xs text-neutral-400 mt-6">
-          © {new Date().getFullYear()} Anzhelika Kostyuk. All rights reserved.
+          © {new Date().getFullYear()} Sarthak Khare. All rights reserved.
         </div>
       </div>
     </motion.footer>
